@@ -6,47 +6,29 @@ using System.Threading.Tasks;
 
 namespace ConsoleMyBankApp
 {
-    class Cliente
+    public class Cliente
     {
-        public string nome; 
-        public string CPF;
+        public string nome;
+        public string cpf;
         public string profissao;
 
-        public Cliente(string nome, string CPF, string profissao)
-        {   
+        public Cliente(string nome, string cpf, string profissao)
+        {
             this.setNome(nome);
-            this.setCPF(CPF);
+            this.setCPF(cpf);
             this.setProfissao(profissao);
         }
 
-        public string getNome()
-        {
-            return this.nome;
+        public virtual string getNome() { return this.nome; }
+        public void setNome(string nome) { this.nome = nome; }
 
-        }
-        public void setNome( string nome)
-        {
-            this.nome = nome;
-        }
+        public string getCPF() { return this.cpf; }
+        public void setCPF(string cpf) { this.cpf = cpf; }
 
-        public string getCPF()
-        {
-            return this.CPF;
-        }
-        public void setCPF(string CPF)
-        {
-            this.CPF = CPF;
+        public string getProfissao() { return this.profissao; }
+        public void setProfissao(string profissao) { this.profissao = profissao; }
 
-        }
 
-        public string getProfissao()
-        {
-            return this.profissao;
-        }
-
-        public void setProfissao(string profissao)
-        {
-            this.profissao = profissao;
-        }
     }
+
 }

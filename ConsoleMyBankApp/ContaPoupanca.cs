@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleMyBankApp
 {
-    public class ContaCorrente : Conta
+    public class ContaPoupanca : Conta
     {
-        public ContaCorrente(Cliente titular, int agencia, int conta)
+        public ContaPoupanca(Cliente cliente, int agencia, int conta)
         {
-            this.setTitular(titular);
+            this.setTitular(cliente);
             this.setAgencia(agencia);
             this.setConta(conta);
         }
-
     }
 }
